@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One Person's Day | Social Media & Attention</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root { --paper:#f3efe8; --ink:#1f2926; --green:#344f45; --coral:#b7654a; }
+    body { background:var(--paper); color:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; }
+    .skip-link { position:absolute; left:-999px; top:0; background:var(--green); color:white; padding:8px 16px; z-index:1000; }
+    .skip-link:focus { left:0; }
+    .content-note { background:#fff8e1; border-left:4px solid var(--coral); padding:12px 16px; font-size:14px; margin-bottom:24px; }
+    .navbar-brand { font-weight:bold; color:var(--green)!important; }
+    .nav-link { color:#555!important; }
+    .nav-link:hover,.nav-link.active { color:var(--green)!important; font-weight:bold; }
+    .story-intro { background:white; border-radius:12px; padding:24px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,.06); }
+    .scene-nav { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
+    .scene-nav button { background:white; border:1px solid #ddd; border-radius:20px; padding:6px 16px; font-size:14px; cursor:pointer; transition:all .2s; }
+    .scene-nav button:hover { border-color:var(--green); color:var(--green); }
+    .scene-nav button.active { background:var(--green); color:white; border-color:var(--green); }
+    .scene-card { background:white; border-radius:12px; padding:32px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,.06); min-height:280px; }
+    .scene-number { font-size:12px; text-transform:uppercase; letter-spacing:1px; color:var(--coral); font-weight:700; margin-bottom:8px; }
+    .scene-title { font-size:1.4rem; font-weight:700; margin-bottom:16px; }
+    .scene-text { font-size:1.05rem; line-height:1.8; margin-bottom:20px; }
+    .scene-reflection { background:#f0f4f2; border-left:3px solid var(--green); padding:12px 16px; font-size:14px; font-style:italic; border-radius:0 6px 6px 0; }
+    .fictional-note { background:#fdf2ed; border-left:3px solid var(--coral); padding:8px 12px; font-size:12px; margin-bottom:16px; border-radius:0 6px 6px 0; }
+    .progress-bar-custom { height:4px; background:#e0e0e0; border-radius:2px; margin-bottom:24px; overflow:hidden; }
+    .progress-fill { height:100%; background:var(--green); transition:width .3s; }
+    .nav-buttons { display:flex; justify-content:space-between; margin-top:16px; }
+    footer { margin-top:48px; padding:24px 0; border-top:1px solid #ddd; font-size:14px; color:#666; }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Social Media & Attention</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Observation Tool</a></li>
+          <li class="nav-item"><a class="nav-link" href="evidence.html">What We Know</a></li>
+          <li class="nav-item"><a class="nav-link active" href="story.html">One Person's Day</a></li>
+          <li class="nav-item"><a class="nav-link" href="support.html">Find Help</a></li>
+          <li class="nav-item"><a class="nav-link" href="method.html">Method & AI</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="container mt-4">
+
+    <div class="content-note" role="note">
+      <strong>Content Note:</strong> This story discusses attention difficulties and social media use, which may touch on some readers' personal experiences. You can <strong>skip any scene</strong> at any time, or go directly to <a href="support.html">support information</a>. The character in this story is fictional and not a record of a real person.
+    </div>
+
+    <section class="story-intro">
+      <h1 class="mb-2">One Person's Day</h1>
+      <p class="lead text-muted mb-3">Five ordinary scenes, one fictional university student, and some moments you might recognise.</p>
+      <p class="mb-0" style="font-size:14px; color:#666;">
+        <strong>About this story:</strong> Ah Ching is a fictional character, created from a composite of public narratives and common experiences described in research. She does not represent any real person. The story is not a diagnosis and does not promise recovery. It simply gives some hard-to-express feelings a visible shape.
+      </p>
+    </section>
+
+    <div class="scene-nav" role="tablist" aria-label="Story scenes">
+      <button role="tab" class="active" data-scene="0" aria-selected="true">01 The Room</button>
+      <button role="tab" data-scene="1" aria-selected="false">02 The Street</button>
+      <button role="tab" data-scene="2" aria-selected="false">03 The Message</button>
+      <button role="tab" data-scene="3" aria-selected="false">04 The Pause</button>
+      <button role="tab" data-scene="4" aria-selected="false">05 A Small Plan</button>
+    </div>
+
+    <div class="progress-bar-custom" role="progressbar" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" aria-label="Story progress">
+      <div class="progress-fill" id="progressFill" style="width:20%"></div>
+    </div>
+
+    <div id="sceneContainer" class="scene-card" role="tabpanel" aria-live="polite">
+      <div class="fictional-note">Fictional scene · Not a record of a real person</div>
+      <div class="scene-number" id="sceneNumber">Scene 01 / 05</div>
+      <div class="scene-title" id="sceneTitle">The Room</div>
+      <div class="scene-text" id="sceneText"></div>
+      <div class="scene-reflection" id="sceneReflection"></div>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="btn btn-outline-secondary" id="prevBtn" disabled>← Previous</button>
+      <button class="btn btn-primary" id="nextBtn">Next →</button>
+    </div>
+
+    <section style="background:white; border-radius:12px; padding:24px; margin-top:32px; box-shadow:0 2px 8px rgba(0,0,0,.06);">
+      <h2 class="h5 mb-3">🌱 After Reading</h2>
+      <p>This story has no ending, because attention difficulties are usually not a problem that gets "solved." They may come and go, and may change with sleep, stress, environment, and physical condition.</p>
+      <p>If you recognised yourself in some of Ah Ching's moments, that does not mean you have any "disorder." It only means you are a person, trying to focus in a world designed to make focusing hard.</p>
+      <p class="mb-0">If you want to talk to someone, see <a href="support.html">Find Help</a>. If you want to know what the data can and cannot say, see <a href="evidence.html">What We Know</a>.</p>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <p class="mb-1">This website is a DIFH3017 course project. It is not a medical or diagnostic tool.</p>
+    <p class="mb-0">Ah Ching is a fictional character. The story does not constitute diagnosis or treatment advice.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const scenes = [
+      {
+        number: '01',
+        title: 'The Room',
+        text: 'At 8 a.m., Ah Ching\'s alarm goes off for the third time. She reaches over to turn it off and instinctively opens her phone. She only meant to check one message. When she looks up, twenty minutes have passed. She remembers seeing things, but cannot say what. Getting out of bed is the first hurdle of the day, not because she is tired, but because there is always one more thing, and then another.',
+        reflection: '"It\'s not that I don\'t want to get up. I just don\'t know why it\'s so hard."'
+      },
+      {
+        number: '02',
+        title: 'The Street',
+        text: 'On the way to school, Ah Ching wears her earphones but plays no music. She holds her phone in her hand, screen on, but is not looking at anything. As she crosses the road, she glances up at the sky and suddenly notices how quiet the street is. The quiet makes her a little uneasy, so she looks down and scrolls again.',
+        reflection: '"When it\'s quiet, I hear myself. I\'m not sure what I want to hear."'
+      },
+      {
+        number: '03',
+        title: 'The Message',
+        text: 'In the middle of class, Ah Ching\'s phone buzzes. She glances down. Someone in a group chat is asking, "Dinner tonight?" She types a few words, then deletes them. She wants to say yes, but remembers she has a report she hasn\'t started. In the end, she replies "maybe later" and turns off notifications. For the next half hour, she keeps thinking about that message and does not hear a single word of the lecture.',
+        reflection: '"I already decided. Why am I still thinking about it?"'
+      },
+      {
+        number: '04',
+        title: 'The Pause',
+        text: 'In the afternoon, Ah Ching sits down in the library. She opens her notebook, writes the first line, then picks up her phone. She tells herself, "Just five minutes." Five minutes become fifteen, and fifteen become half an hour. When she puts the phone down, the notebook still has only that one line. She is not angry, just tired.',
+        reflection: '"I\'m not lazy. I just can\'t seem to hold on to my own attention."'
+      },
+      {
+        number: '05',
+        title: 'A Small Plan',
+        text: 'In the evening, Ah Ching does not try to "quit her phone." She just opens her notes app and writes down when she found it hardest to focus today, and when it was okay. She writes three lines, then turns off the screen. She doesn\'t know if this will help. But she thinks, at least she has started to see something.',
+        reflection: '"I don\'t know if this will change anything. But I want to see it first."'
+      }
+    ];
+
+    let currentScene = 0;
+
+    function renderScene(index) {
+      const scene = scenes[index];
+      document.getElementById('sceneNumber').textContent = `Scene ${scene.number} / 05`;
+      document.getElementById('sceneTitle').textContent = scene.title;
+      document.getElementById('sceneText').textContent = scene.text;
+      document.getElementById('sceneReflection').textContent = scene.reflection;
+
+      const progress = ((index + 1) / scenes.length) * 100;
+      document.getElementById('progressFill').style.width = progress + '%';
+      document.querySelector('.progress-bar-custom').setAttribute('aria-valuenow', index + 1);
+
+      document.getElementById('prevBtn').disabled = index === 0;
+      document.getElementById('nextBtn').disabled = index === scenes.length - 1;
+
+      document.querySelectorAll('.scene-nav button').forEach((btn, i) => {
+        btn.classList.toggle('active', i === index);
+        btn.setAttribute('aria-selected', i === index ? 'true' : 'false');
+      });
+
+      currentScene = index;
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      if (currentScene > 0) renderScene(currentScene - 1);
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      if (currentScene < scenes.length - 1) renderScene(currentScene + 1);
+    });
+
+    document.querySelectorAll('.scene-nav button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        renderScene(parseInt(btn.dataset.scene));
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft' && currentScene > 0) renderScene(currentScene - 1);
+      if (e.key === 'ArrowRight' && currentScene < scenes.length - 1) renderScene(currentScene + 1);
+    });
+
+    renderScene(0);
+  </script>
+</body>
+</html>

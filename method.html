@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Method & AI | Social Media & Attention</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root { --paper:#f3efe8; --ink:#1f2926; --green:#344f45; --coral:#b7654a; }
+    body { background:var(--paper); color:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; }
+    .skip-link { position:absolute; left:-999px; top:0; background:var(--green); color:white; padding:8px 16px; z-index:1000; }
+    .skip-link:focus { left:0; }
+    .content-note { background:#fff8e1; border-left:4px solid var(--coral); padding:12px 16px; font-size:14px; margin-bottom:24px; }
+    .navbar-brand { font-weight:bold; color:var(--green)!important; }
+    .nav-link { color:#555!important; }
+    .nav-link:hover,.nav-link.active { color:var(--green)!important; font-weight:bold; }
+    .method-card { background:white; border-radius:12px; padding:24px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,.06); }
+    .method-card h2 { font-size:1.2rem; font-weight:700; margin-bottom:16px; color:var(--green); }
+    .source-table { font-size:14px; width:100%; border-collapse:collapse; }
+    .source-table th { background:#f0f4f2; text-align:left; padding:10px 12px; font-weight:600; color:var(--green); border-bottom:2px solid var(--green); }
+    .source-table td { padding:10px 12px; border-bottom:1px solid #eee; vertical-align:top; }
+    .source-table tr:hover { background:#fafafa; }
+    .ai-log-entry { border-left:3px solid var(--coral); padding:12px 16px; margin-bottom:16px; background:#fdf9f7; border-radius:0 6px 6px 0; }
+    .ai-log-date { font-size:12px; color:#999; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px; }
+    .ai-log-tool { font-size:13px; font-weight:600; color:var(--coral); margin-bottom:4px; }
+    .ai-log-content { font-size:14px; line-height:1.7; }
+    .ai-log-content strong { color:var(--green); }
+    .rejected-box { background:#fff3f0; border-left:3px solid var(--coral); padding:8px 12px; font-size:13px; margin-top:8px; border-radius:0 4px 4px 0; }
+    .limit-list { font-size:14px; line-height:1.8; padding-left:20px; }
+    .limit-list li { margin-bottom:8px; }
+    .btn-primary { background:var(--green); border-color:var(--green); }
+    footer { margin-top:48px; padding:24px 0; border-top:1px solid #ddd; font-size:14px; color:#666; }
+    @media (max-width: 640px) {
+      .source-table { font-size:12px; }
+      .source-table th, .source-table td { padding:8px 6px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Social Media & Attention</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Observation Tool</a></li>
+          <li class="nav-item"><a class="nav-link" href="evidence.html">What We Know</a></li>
+          <li class="nav-item"><a class="nav-link" href="story.html">One Person's Day</a></li>
+          <li class="nav-item"><a class="nav-link" href="support.html">Find Help</a></li>
+          <li class="nav-item"><a class="nav-link active" href="method.html">Method & AI</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="container mt-4">
+
+    <div class="content-note" role="note">
+      <strong>Purpose of this page:</strong> To let readers inspect the evidence chain of this website. Where each number comes from, what AI did, what humans changed, and what was rejected. If you find any inconsistency, you are welcome to raise it.
+    </div>
+
+    <h1 class="mb-2">Method & AI</h1>
+    <p class="lead text-muted mb-4">Sources, processing, human edits, and what we deliberately did not do.</p>
+
+    <section class="method-card" aria-labelledby="sources-title">
+      <h2 id="sources-title">📚 Source Table</h2>
+      <p style="font-size:14px; color:#666; margin-bottom:16px;">Each claim below maps to a verifiable source. The final column is "Limits" — it explains what the number cannot support.</p>
+
+      <div style="overflow-x:auto;">
+        <table class="source-table">
+          <thead>
+            <tr>
+              <th>Claim</th>
+              <th>Source</th>
+              <th>Sample / Denominator</th>
+              <th>Date</th>
+              <th>Limits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>93.4% use social media, 4.1 hours/day on average</td>
+              <td>Hong Kong Christian Service, "Youth Loneliness and Online Social Behaviour Survey"</td>
+              <td>572 Hong Kong youth aged 11–24</td>
+              <td>Published July 2026</td>
+              <td>Self-reported; does not cover university students aged 18+; does not measure attention</td>
+            </tr>
+            <tr>
+              <td>ADHD 12-month prevalence 10.2% (95% CI: 9.4–11.0%)</td>
+              <td>Hong Kong Child and Adolescent Psychiatric Epidemiology Survey (2019–2023)</td>
+              <td>Weighted sample of 6,082 school children and adolescents aged 6–17</td>
+              <td>Published 2025</td>
+              <td>Clinical diagnosis, not self-reported feelings; does not cover university students; does not involve social media</td>
+            </tr>
+            <tr>
+              <td>81.1% of secondary students spend ≥2 hours on screen entertainment on a school day</td>
+              <td>Department of Health, "Student Health Service 2024/25 Annual Health Report", cited in a Legislative Council document</td>
+              <td>Approximately 429,000 primary and secondary students in Hong Kong</td>
+              <td>April 2026 Legislative Council reply</td>
+              <td>"Screen entertainment" is not limited to social media; 2 hours is a threshold, not a continuous measure; does not cover university students</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="font-size:13px; color:#999; margin-top:16px; margin-bottom:0;">
+        <strong>Note:</strong> All numbers above were verified against the original sources before submission. If a number cannot be found in the original source, it does not appear on this website.
+      </p>
+    </section>
+
+    <section class="method-card" aria-labelledby="ai-log-title">
+      <h2 id="ai-log-title">🤖 AI Use Log</h2>
+      <p style="font-size:14px; color:#666; margin-bottom:16px;">The following is AI's actual involvement in this project. Each entry records: which tool was used, what the prompt was, what AI produced, what humans changed, and what was rejected.</p>
+
+      <div class="ai-log-entry">
+        <div class="ai-log-date">April 2026 · Website Structure</div>
+        <div class="ai-log-tool">Tool: Claude</div>
+        <div class="ai-log-content">
+          <strong>Prompt:</strong> "Write a health communication website homepage using HTML + Bootstrap 5, topic is social media and youth attention, audience is Hong Kong university students, include a content note and skip link."<br>
+          <strong>AI output:</strong> A complete `index.html` skeleton with navigation, hero section, and observation tool form.<br>
+          <strong>Human edits:</strong> Removed the AI-suggested "Your attention score is XX" result display; changed it to show only an observation description, with no score.<br>
+          <strong>Rejected suggestion:</strong> AI proposed adding a "Share to social media" button. Rejected — it contradicts the site's message about reducing mindless scrolling.
+        </div>
+      </div>
+
+      <div class="ai-log-entry">
+        <div class="ai-log-date">April 2026 · Evidence Page</div>
+        <div class="ai-log-tool">Tool: Claude</div>
+        <div class="ai-log-content">
+          <strong>Prompt:</strong> "Help me organise these three claims into a table, each with source, sample, date, and limits. Do not fill in numbers for me; the numbers I provide are all there is."<br>
+          <strong>AI output:</strong> Table structure and CSS styling.<br>
+          <strong>Human edits:</strong> Removed all AI-inserted "[citation:1]" markers and replaced them with readable source names. Verified every number against the original source.<br>
+          <strong>Rejected suggestion:</strong> AI suggested adding the sentence "Research shows social media causes attention decline." Rejected — current evidence does not support a causal conclusion.
+        </div>
+      </div>
+
+      <div class="ai-log-entry">
+        <div class="ai-log-date">April 2026 · Story Page</div>
+        <div class="ai-log-tool">Tool: Claude</div>
+        <div class="ai-log-content">
+          <strong>Prompt:</strong> "Write a fictional Hong Kong university student, five scenes, showing social media use and attention difficulties. Do not diagnose, do not promise recovery, do not use the word 'addiction'."<br>
+          <strong>AI output:</strong> Five-scene story draft, protagonist named Ah Ching.<br>
+          <strong>Human edits:</strong> Removed the AI-written ending "she finally learned to put down her phone and her grades improved" and changed it to "she started recording her usage patterns but did not reach a conclusion." Changed scene 03 from "she felt like a failure" to "she was not angry, just tired" — avoiding self-stigmatising language.<br>
+          <strong>Rejected suggestion:</strong> AI suggested adding a "Quiz: Is your attention healthy?" at the end of each scene. Rejected — the website does not diagnose.
+        </div>
+      </div>
+
+      <div class="ai-log-entry">
+        <div class="ai-log-date">April 2026 · Support Page</div>
+        <div class="ai-log-tool">Tool: Claude</div>
+        <div class="ai-log-content">
+          <strong>Prompt:</strong> "List verifiable mental health support hotlines and university counselling services in Hong Kong, each with operating organisation, service hours, and target group."<br>
+          <strong>AI output:</strong> A list of hotlines.<br>
+          <strong>Human edits:</strong> Checked every number and service hour against the organisation's official website; removed two discontinued numbers provided by AI; separated "urgent" and "non-urgent" sections.<br>
+          <strong>Rejected suggestion:</strong> AI suggested adding an "online self-assessment" link. Rejected — unverified assessment tools may mislead readers.
+        </div>
+      </div>
+    </section>
+
+    <section class="method-card" aria-labelledby="edits-title">
+      <h2 id="edits-title">✏️ Human Editing Principles</h2>
+      <p style="font-size:14px; margin-bottom:12px;">AI played the role of <strong>drafter</strong>, not <strong>decision-maker</strong>, in this project. The following are the final decisions retained by human editors:</p>
+      <ul class="limit-list">
+        <li><strong>Numbers were not outsourced:</strong> Every claim's number came from a manually verified original source, not generated by AI.</li>
+        <li><strong>Causal language was not outsourced:</strong> AI repeatedly suggested "causes" and "proves"; all were changed to "associated with", "coexist", and "cannot establish causation".</li>
+        <li><strong>Diagnostic language was not outsourced:</strong> The website does not contain sentences like "you have ADHD" or "you have anxiety disorder".</li>
+        <li><strong>Support information was not outsourced:</strong> Hotline numbers, service hours, and target groups were all manually verified against official organisation websites.</li>
+        <li><strong>Stories were not outsourced:</strong> Every scene's tone and details were rewritten by humans to ensure no promise of recovery and no stigmatisation.</li>
+      </ul>
+    </section>
+
+    <section class="method-card" aria-labelledby="limits-title">
+      <h2 id="limits-title">⚠️ Known Limitations of This Website</h2>
+      <ul class="limit-list">
+        <li><strong>No university-specific local data:</strong> Existing Hong Kong data cover ages 6–17 and 11–24; there is no survey specifically on "Hong Kong university students", social media, and attention. We do not pretend it exists.</li>
+        <li><strong>No causal evidence:</strong> The website presents correlations and trends, not causation. The WHO 2025 policy brief explicitly notes that the relationship between technology use and mental health is bidirectional, with mixed evidence.</li>
+        <li><strong>"Attention difficulties" is not a single measure:</strong> Some people mean difficulty focusing, some mean being easily distracted, some mean memory decline. The website does not combine these into a single score.</li>
+        <li><strong>The story is fictional:</strong> Ah Ching is not a real person; her experiences cannot represent any reader, nor can they be used to infer population data.</li>
+        <li><strong>Support information is time-sensitive:</strong> Hotline numbers and service hours may change. If a number does not work, refer to the organisation's official website.</li>
+        <li><strong>This website is not a medical tool:</strong> It does not provide diagnosis, treatment advice, or clinical assessment. If you are concerned about your own situation, please seek professional support.</li>
+      </ul>
+    </section>
+
+    <section class="method-card" aria-labelledby="refs-title">
+      <h2 id="refs-title">📎 Full Reference List</h2>
+      <ol style="font-size:14px; line-height:1.9; padding-left:20px; margin-bottom:0;">
+        <li>Hong Kong Christian Service (July 2026). "Youth Loneliness and Online Social Behaviour Survey".</li>
+        <li>Hong Kong Child and Adolescent Psychiatric Epidemiology Survey (2019–2023). Published 2025.</li>
+        <li>Department of Health, "Student Health Service 2024/25 Annual Health Report", cited in a Legislative Council document (April 2026).</li>
+        <li>World Health Organization (2025). Policy brief: technology use and mental health.</li>
+        <li>Official websites of The Samaritans, Samaritan Befrienders Hong Kong, Hospital Authority, The Mental Health Association of Hong Kong, etc. (support information verified April 2026).</li>
+      </ol>
+      <p style="font-size:13px; color:#999; margin-top:16px; margin-bottom:0;">
+        <strong>Last updated:</strong> April 2026. If you find any broken source links or numbers that need updating, please contact the course instructor.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <p class="mb-1">This website is a DIFH3017 course project. It is not a medical or diagnostic tool.</p>
+    <p class="mb-0">All numbers come from manually verified public sources. AI involvement is documented in the log above.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

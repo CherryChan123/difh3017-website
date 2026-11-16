@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Social Media & Attention: An Observation Tool</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root { --paper:#f3efe8; --ink:#1f2926; --green:#344f45; --coral:#b7654a; }
+    body { background:var(--paper); color:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; }
+    .skip-link { position:absolute; left:-999px; top:0; background:var(--green); color:white; padding:8px 16px; z-index:1000; }
+    .skip-link:focus { left:0; }
+    .content-note { background:#fff8e1; border-left:4px solid var(--coral); padding:12px 16px; font-size:14px; margin-bottom:24px; }
+    .navbar-brand { font-weight:bold; color:var(--green)!important; }
+    .nav-link { color:#555!important; }
+    .nav-link:hover,.nav-link.active { color:var(--green)!important; font-weight:bold; }
+    .hero { background:var(--green); color:white; padding:48px 24px; border-radius:16px; margin-bottom:32px; }
+    .hero h1 { font-size:2.2rem; font-weight:700; }
+    .card-soft { background:white; border-radius:12px; padding:24px; box-shadow:0 2px 8px rgba(0,0,0,.06); margin-bottom:24px; }
+    .btn-primary { background:var(--green); border-color:var(--green); }
+    .btn-primary:hover { background:#2a3f37; border-color:#2a3f37; }
+    .form-label { font-weight:600; }
+    .result-box { background:#eef3f1; border-left:4px solid var(--green); padding:16px; border-radius:8px; margin-top:16px; }
+    footer { margin-top:48px; padding:24px 0; border-top:1px solid #ddd; font-size:14px; color:#666; }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Social Media & Attention</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Observation Tool</a></li>
+          <li class="nav-item"><a class="nav-link" href="evidence.html">What We Know</a></li>
+          <li class="nav-item"><a class="nav-link" href="story.html">One Person's Day</a></li>
+          <li class="nav-item"><a class="nav-link" href="support.html">Find Help</a></li>
+          <li class="nav-item"><a class="nav-link" href="method.html">Method & AI</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="container mt-4">
+
+    <div class="content-note" role="note">
+      <strong>Content Note:</strong> This page discusses social media use and attention difficulties. It is not a diagnostic tool and does not replace professional advice. You may skip any section and go directly to <a href="support.html">support information</a>.
+    </div>
+
+    <section class="hero">
+      <h1>Where did your attention go?</h1>
+      <p class="lead mb-0">Take one minute to record your social media use and focus over the past week. This is not a test, there is no score, and it will not give you a credible "diagnosis".</p>
+    </section>
+
+    <section class="card-soft" aria-labelledby="tool-title">
+      <h2 id="tool-title" class="h4 mb-3">📝 One-Week Observation Tool</h2>
+      <p class="text-muted">These questions are for your own reflection only. We do not store your answers or send them to any server.</p>
+
+      <form id="observeForm" novalidate>
+        <div class="row mb-3">
+          <label for="hours" class="col-sm-4 col-form-label">On average, how much time did you spend on social media each day last week?</label>
+          <div class="col-sm-8">
+            <select class="form-select" id="hours" name="hours" required>
+              <option value="">Please select</option>
+              <option value="1">Less than 1 hour</option>
+              <option value="2">1–3 hours</option>
+              <option value="3">3–5 hours</option>
+              <option value="4">More than 5 hours</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="focus" class="col-sm-4 col-form-label">How often did you find it difficult to focus on one thing?</label>
+          <div class="col-sm-8">
+            <select class="form-select" id="focus" name="focus" required>
+              <option value="">Please select</option>
+              <option value="1">Almost never</option>
+              <option value="2">Sometimes</option>
+              <option value="3">Often</option>
+              <option value="4">Almost every day</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="context" class="col-sm-4 col-form-label">When did this most often happen?</label>
+          <div class="col-sm-8">
+            <select class="form-select" id="context" name="context" required>
+              <option value="">Please select</option>
+              <option value="study">While studying / doing homework</option>
+              <option value="sleep">Before sleep</option>
+              <option value="class">During class</option>
+              <option value="social">While with other people</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" id="consent" name="consent" required>
+          <label class="form-check-label" for="consent">
+            I understand this is not a diagnosis and does not replace professional advice.
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">See my observation</button>
+        <button type="reset" class="btn btn-outline-secondary ms-2">Clear</button>
+      </form>
+
+      <div id="result" class="result-box d-none" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="card-soft" aria-labelledby="next-title">
+      <h2 id="next-title" class="h4 mb-3">🌱 If you want to do something</h2>
+      <ul class="mb-0">
+        <li>Track your usage patterns for a week. Do not judge them; just notice them.</li>
+        <li>Talk to someone you trust. You do not need to have a conclusion first.</li>
+        <li>If you want professional support, see <a href="support.html">Find Help</a>.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <p class="mb-1">This website is a DIFH3017 course project. It is not a medical or diagnostic tool.</p>
+    <p class="mb-0">For sources and methods, see <a href="method.html">Method & AI</a>.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('observeForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const hours = document.getElementById('hours').value;
+      const focus = document.getElementById('focus').value;
+      const context = document.getElementById('context').value;
+      const consent = document.getElementById('consent').checked;
+
+      if (!hours || !focus || !context || !consent) {
+        alert('Please fill in all fields and confirm you understand this is not a diagnosis.');
+        return;
+      }
+
+      const hoursText = { '1': 'less than 1 hour', '2': '1–3 hours', '3': '3–5 hours', '4': 'more than 5 hours' }[hours];
+      const focusText = { '1': 'almost never', '2': 'sometimes', '3': 'often', '4': 'almost every day' }[focus];
+      const contextText = { 'study': 'while studying or doing homework', 'sleep': 'before sleep', 'class': 'during class', 'social': 'while with other people', 'other': 'at other times' }[context];
+
+      const result = document.getElementById('result');
+      result.classList.remove('d-none');
+      result.innerHTML = `
+        <p class="mb-2"><strong>Your observation:</strong></p>
+        <p class="mb-2">Last week, you spent an average of <strong>${hoursText}</strong> per day on social media, and you <strong>${focusText}</strong> found it difficult to focus, most often <strong>${contextText}</strong>.</p>
+        <p class="mb-2">This is an observation, not a conclusion. Using social media for a long time does not mean your attention is necessarily a problem; and difficulty focusing does not necessarily come from social media. Both can exist at the same time, and each may have different causes.</p>
+        <p class="mb-0">To learn more about the research and its limits, see <a href="evidence.html">What We Know</a>.</p>
+      `;
+      result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What We Know | Social Media & Attention</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.54.0/dist/apexcharts.min.js"></script>
+  <style>
+    :root { --paper:#f3efe8; --ink:#1f2926; --green:#344f45; --coral:#b7654a; }
+    body { background:var(--paper); color:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; }
+    .skip-link { position:absolute; left:-999px; top:0; background:var(--green); color:white; padding:8px 16px; z-index:1000; }
+    .skip-link:focus { left:0; }
+    .content-note { background:#fff8e1; border-left:4px solid var(--coral); padding:12px 16px; font-size:14px; margin-bottom:24px; }
+    .navbar-brand { font-weight:bold; color:var(--green)!important; }
+    .nav-link { color:#555!important; }
+    .nav-link:hover,.nav-link.active { color:var(--green)!important; font-weight:bold; }
+    .claim-card { background:white; border-radius:12px; padding:24px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,.06); }
+    .claim-number { font-size:12px; text-transform:uppercase; letter-spacing:1px; color:var(--coral); font-weight:700; margin-bottom:8px; }
+    .claim-text { font-size:1.15rem; font-weight:600; line-height:1.5; margin-bottom:16px; }
+    .meta-table { font-size:14px; }
+    .meta-table th { width:120px; color:#666; font-weight:600; padding:4px 8px 4px 0; vertical-align:top; }
+    .meta-table td { padding:4px 0; }
+    .limit-box { background:#fdf2ed; border-left:3px solid var(--coral); padding:12px 16px; font-size:14px; margin-top:12px; border-radius:0 6px 6px 0; }
+    .chart-container { background:white; border-radius:12px; padding:24px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,.06); }
+    .chart-caption { font-size:13px; color:#666; margin-top:12px; line-height:1.6; }
+    .btn-primary { background:var(--green); border-color:var(--green); }
+    footer { margin-top:48px; padding:24px 0; border-top:1px solid #ddd; font-size:14px; color:#666; }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Social Media & Attention</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Observation Tool</a></li>
+          <li class="nav-item"><a class="nav-link active" href="evidence.html">What We Know</a></li>
+          <li class="nav-item"><a class="nav-link" href="story.html">One Person's Day</a></li>
+          <li class="nav-item"><a class="nav-link" href="support.html">Find Help</a></li>
+          <li class="nav-item"><a class="nav-link" href="method.html">Method & AI</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="container mt-4">
+
+    <div class="content-note" role="note">
+      <strong>Reading Note:</strong> The numbers below describe <strong>groups</strong>, not individuals. They cannot tell you whether you have an attention problem, nor can they prove that social media causes attention problems. Each number is followed by its limits.
+    </div>
+
+    <h1 class="mb-2">What We Know</h1>
+    <p class="lead text-muted mb-4">Three verifiable numbers, and what each of them cannot say.</p>
+
+    <section class="claim-card" aria-labelledby="claim1-title">
+      <div class="claim-number">Claim 1 · Usage Behaviour</div>
+      <div id="claim1-title" class="claim-text">
+        Among Hong Kong youth aged 11–24, 93.4% use social media, for an average of 4.1 hours per day.
+      </div>
+      <table class="meta-table">
+        <tr><th>Source</th><td>Hong Kong Christian Service, "Youth Loneliness and Online Social Behaviour Survey"</td></tr>
+        <tr><th>Sample</th><td>572 Hong Kong youth aged 11–24 (questionnaire survey)</td></tr>
+        <tr><th>Date</th><td>Published July 2026</td></tr>
+        <tr><th>Denominator</th><td>Of 572 respondents, 93.4% reported using social media; the 4.1-hour average is self-reported</td></tr>
+      </table>
+      <div class="limit-box">
+        <strong>What this number cannot say:</strong> It cannot describe "university students" specifically (the sample covers ages 11–24, including secondary school students and working youth); nor can it show a causal link between usage time and attention difficulties. Self-reported usage time may also be subject to recall bias.
+      </div>
+    </section>
+
+    <section class="claim-card" aria-labelledby="claim2-title">
+      <div class="claim-number">Claim 2 · Clinical Prevalence</div>
+      <div id="claim2-title" class="claim-text">
+        Among Hong Kong children and adolescents aged 6–17, the 12-month prevalence of ADHD is 10.2% (95% CI: 9.4–11.0%).
+      </div>
+      <table class="meta-table">
+        <tr><th>Source</th><td>Hong Kong Child and Adolescent Psychiatric Epidemiology Survey (2019–2023)</td></tr>
+        <tr><th>Sample</th><td>Weighted sample of 6,082 school children and adolescents aged 6–17</td></tr>
+        <tr><th>Date</th><td>Published 2025</td></tr>
+        <tr><th>Denominator</th><td>Of 6,082 respondents, 10.2% met DSM-5 diagnostic criteria for ADHD in the past 12 months</td></tr>
+      </table>
+      <div class="limit-box">
+        <strong>What this number cannot say:</strong> This is a <strong>clinical diagnosis</strong> prevalence rate, not the proportion of people who "feel their attention is poor." It also does not cover university students aged 18+. ADHD has multiple causes involving genetics, neurodevelopment, and environment; this number itself has nothing to do with social media.
+      </div>
+    </section>
+
+    <section class="claim-card" aria-labelledby="claim3-title">
+      <div class="claim-number">Claim 3 · Trend</div>
+      <div id="claim3-title" class="claim-text">
+        In the 2024/25 school year, 81.1% of Hong Kong secondary school students spent at least 2 hours on electronic screens for entertainment on a typical school day.
+      </div>
+      <table class="meta-table">
+        <tr><th>Source</th><td>Department of Health, "Student Health Service 2024/25 Annual Health Report", cited in a Legislative Council document</td></tr>
+        <tr><th>Sample</th><td>Approximately 429,000 primary and secondary school students in Hong Kong</td></tr>
+        <tr><th>Date</th><td>April 2026 Legislative Council reply</td></tr>
+        <tr><th>Denominator</th><td>Among surveyed secondary students, 81.1% reported spending ≥2 hours on screens for entertainment on a typical school day</td></tr>
+      </table>
+      <div class="limit-box">
+        <strong>What this number cannot say:</strong> "Electronic screens for entertainment" includes social media, games, videos, etc., not only social media. 2 hours is a threshold, not a continuous measure of attention. Secondary school data cannot be directly generalised to university students. A rising rate does not necessarily mean attention problems are rising.
+      </div>
+    </section>
+
+    <section class="chart-container" aria-labelledby="chart-title">
+      <h2 id="chart-title" class="h5 mb-3">📊 One Number, Two Readings</h2>
+      <p class="text-muted" style="font-size:14px;">The chart below presents only one number from Claim 1: the daily average of 4.1 hours. It does not show attention difficulties, because that survey did not measure attention.</p>
+      <div id="chart-hours" role="img" aria-label="Bar chart showing that Hong Kong youth spend an average of 4.1 hours per day on social media"></div>
+      <div class="chart-caption">
+        <strong>Figure 1 notes:</strong> Average daily social media use among Hong Kong youth aged 11–24 (n = 572, July 2026). Source: Hong Kong Christian Service.<br>
+        <strong>Limits:</strong> Self-reported data; sample is 11–24 years old and does not directly represent university students; this chart shows only the average, not the distribution or extreme values. This chart does not show any measure of attention.
+      </div>
+    </section>
+
+    <section class="claim-card" style="border-left:4px solid var(--coral);">
+      <h2 class="h5 mb-3">⚠️ What Putting These Three Numbers Together Cannot Tell Us</h2>
+      <p>Claim 1 is about <strong>usage behaviour</strong>, Claim 2 is about <strong>clinical diagnosis</strong>, and Claim 3 is about the <strong>trend in screen entertainment time</strong>. There is no causal evidence linking the three.</p>
+      <p>The WHO 2025 policy brief explicitly states that the relationship between technology use and mental health is <strong>bidirectional</strong>, with mixed evidence showing both negative and positive associations. A 2024 IEEE paper citing Hong Kong research found that social media and multitasking were associated with lower academic performance, but this is still <strong>correlation</strong>, not "social media causes attention deficits".</p>
+      <p class="mb-0"><strong>What this website can say:</strong> Long usage time and attention difficulties can coexist, but each may have separate causes. If you are concerned about your own situation, please see <a href="support.html">Find Help</a>.</p>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <p class="mb-1">This website is a DIFH3017 course project. It is not a medical or diagnostic tool.</p>
+    <p class="mb-0">For full sources and methods, see <a href="method.html">Method & AI</a>.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const options = {
+      chart: { type: 'bar', height: 220, toolbar: { show: false } },
+      series: [{ name: 'Hours', data: [4.1] }],
+      xaxis: { categories: ['Daily Average'] },
+      colors: ['#344f45'],
+      plotOptions: { bar: { borderRadius: 6, columnWidth: '30%' } },
+      dataLabels: { enabled: true, formatter: v => v + ' hours', style: { fontSize: '14px', fontWeight: '600' } },
+      yaxis: { max: 6, labels: { formatter: v => v + 'h' } },
+      grid: { borderColor: '#e5e5e5' }
+    };
+    new ApexCharts(document.querySelector('#chart-hours'), options).render();
+  </script>
+</body>
+</html>
